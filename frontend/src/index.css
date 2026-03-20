@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* react-leaflet uses Leaflet panes with fixed heights; ensure body stretches */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Customizing Leaflet & Geoman Control Panels */
+.leaflet-bar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-control-zoom.leaflet-bar {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  background-color: white !important;
+  overflow: hidden;
+  margin-left: 14px !important;
+  margin-top: 14px !important;
+}
+
+.leaflet-control-zoom.leaflet-bar a {
+  border-bottom: 1px solid #e2e8f0 !important;
+  color: #475569 !important;
+  background: white !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  transition: all 0.2s;
+}
+.leaflet-control-zoom.leaflet-bar a:last-child {
+  border-bottom: none !important;
+}
+.leaflet-control-zoom.leaflet-bar a:hover {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+.leaflet-pm-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 14px !important;
+  margin-top: 14px !important;
+}
+
+.leaflet-pm-toolbar .button-container {
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  background-color: white !important;
+  overflow: hidden;
+}
+
+.leaflet-pm-toolbar .leaflet-buttons-control-button {
+  border-bottom: 1px solid #f1f5f9 !important;
+  background: white !important;
+  width: 36px !important;
+  height: 36px !important;
+  transition: all 0.2s;
+}
+
+.leaflet-pm-toolbar .leaflet-buttons-control-button:last-child {
+  border-bottom: none !important;
+}
+
+.leaflet-pm-toolbar .leaflet-buttons-control-button .control-icon {
+  filter: opacity(0.7) drop-shadow(0 0 0 #475569);
+}
+
+.leaflet-pm-toolbar .leaflet-buttons-control-button:hover {
+  background: #f8fafc !important;
+}
+
+.leaflet-pm-toolbar .leaflet-buttons-control-button:hover .control-icon {
+  filter: opacity(1) drop-shadow(0 0 0 #0f172a);
+}
+
+/* Make active draw button stand out */
+.leaflet-pm-toolbar .active {
+  background: #f1f5f9 !important;
+  border-left: 3px solid #0f172a !important;
+}
+
