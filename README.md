@@ -1,1 +1,1 @@
-# ThunderMInd-Prokaratura
+# qogam-analyze-ai
